@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Dashboard - Arewa Deliver</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="vendor_dashboard.html" class="flex items-center space-x-2">
+        <img src="../assets/images/logo.png" alt="Arewa Deliver Logo" class="h-10 w-10">
+        <span class="font-bold text-xl text-blue-800">Arewa Deliver</span>
+      </a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="vendor_dashboard.html" class="hover:text-blue-600 font-medium">Dashboard</a>
+        <a href="vendor_products.html" class="hover:text-blue-600 font-medium">Products</a>
+        <a href="vendor_new_delivery.html" class="hover:text-blue-600 font-medium">New Delivery</a>
+        <a href="vendor_orders.html" class="hover:text-blue-600 font-medium">Orders</a>
+        <a href="vendor_wallet.html" class="hover:text-blue-600 font-medium">Wallet</a>
+        <a href="vendor_notifications.html" class="hover:text-blue-600 font-medium">Notifications</a>
+        <a href="vendor_profile.html" class="hover:text-blue-600 font-medium">Profile</a>
+        <a href="../logout.html" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Logout</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-white">
+      <a href="vendor_dashboard.html" class="block hover:text-blue-600 font-medium">Dashboard</a>
+      <a href="vendor_products.html" class="block hover:text-blue-600 font-medium">Products</a>
+      <a href="vendor_new_delivery.html" class="block hover:text-blue-600 font-medium">New Delivery</a>
+      <a href="vendor_orders.html" class="block hover:text-blue-600 font-medium">Orders</a>
+      <a href="vendor_wallet.html" class="block hover:text-blue-600 font-medium">Wallet</a>
+      <a href="vendor_notifications.html" class="block hover:text-blue-600 font-medium">Notifications</a>
+      <a href="vendor_profile.html" class="block hover:text-blue-600 font-medium">Profile</a>
+      <a href="../logout.html" class="block bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-center">Logout</a>
+    </div>
+  </header>
+
+  <!-- Hero / Dashboard Summary -->
+  <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-blue-800">Vendor Dashboard</h1>
+    <p class="text-gray-600 mt-2">Quick overview of your store performance and deliveries.</p>
+
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Total Products -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-gray-500 font-semibold">Total Products</h2>
+        <p class="mt-2 text-2xl font-bold text-gray-800">12</p>
+      </div>
+      <!-- Active Orders -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-gray-500 font-semibold">Active Orders</h2>
+        <p class="mt-2 text-2xl font-bold text-gray-800">5</p>
+      </div>
+      <!-- Completed Deliveries -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-gray-500 font-semibold">Completed Deliveries</h2>
+        <p class="mt-2 text-2xl font-bold text-gray-800">18</p>
+      </div>
+      <!-- Wallet Balance -->
+      <div class="bg-white rounded-lg shadow p-6">
+        <h2 class="text-gray-500 font-semibold">Wallet Balance</h2>
+        <p class="mt-2 text-2xl font-bold text-green-600">$320</p>
+      </div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <div class="mt-10 bg-white shadow rounded-lg p-6">
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">Recent Orders</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Order ID</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Customer</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+              <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr>
+              <td class="px-4 py-2">#1023</td>
+              <td class="px-4 py-2">John Doe</td>
+              <td class="px-4 py-2"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Pending</span></td>
+              <td class="px-4 py-2">Dec 5, 2025</td>
+              <td class="px-4 py-2">
+                <a href="vendor_orders.html" class="text-blue-600 hover:underline">View</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">#1022</td>
+              <td class="px-4 py-2">Jane Smith</td>
+              <td class="px-4 py-2"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Completed</span></td>
+              <td class="px-4 py-2">Dec 4, 2025</td>
+              <td class="px-4 py-2">
+                <a href="vendor_orders.html" class="text-blue-600 hover:underline">View</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+      <p>&copy; 2025 Arewa Deliver. All rights reserved.</p>
+      <div class="flex justify-center mt-4 space-x-4">
+        <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600">Terms of Service</a>
+        <a href="#" class="hover:text-blue-600">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

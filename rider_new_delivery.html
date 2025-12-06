@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Delivery Requests</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <h1 class="text-xl font-bold text-gray-800">New Delivery Requests</h1>
+  </header>
+
+  <!-- Requests List -->
+  <section class="p-4 space-y-4">
+
+    <!-- Request Card -->
+    <div class="bg-white p-4 rounded-xl shadow">
+      <div class="flex justify-between items-center">
+        <h2 class="font-semibold text-gray-800">Request #1201</h2>
+        <span class="text-sm px-3 py-1 bg-blue-100 text-blue-600 rounded-full">New</span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-600">
+        <p><span class="font-semibold">Pickup:</span> Sabon Gari Market</p>
+        <p><span class="font-semibold">Drop-off:</span> Zoo Road</p>
+        <p><span class="font-semibold">Distance:</span> 5.2 km</p>
+        <p><span class="font-semibold">Delivery Fee:</span> ₦1,200</p>
+      </div>
+
+      <div class="flex gap-3 mt-4">
+        <button class="flex-1 bg-green-600 text-white py-2 rounded-lg font-medium">
+          Accept
+        </button>
+        <button class="flex-1 bg-red-500 text-white py-2 rounded-lg font-medium">
+          Reject
+        </button>
+      </div>
+    </div>
+
+    <!-- Request Card 2 -->
+    <div class="bg-white p-4 rounded-xl shadow">
+      <div class="flex justify-between items-center">
+        <h2 class="font-semibold text-gray-800">Request #1202</h2>
+        <span class="text-sm px-3 py-1 bg-blue-100 text-blue-600 rounded-full">New</span>
+      </div>
+
+      <div class="mt-2 text-sm text-gray-600">
+        <p><span class="font-semibold">Pickup:</span> Unguwa Uku</p>
+        <p><span class="font-semibold">Drop-off:</span> Tarauni</p>
+        <p><span class="font-semibold">Distance:</span> 3.9 km</p>
+        <p><span class="font-semibold">Delivery Fee:</span> ₦900</p>
+      </div>
+
+      <div class="flex gap-3 mt-4">
+        <button class="flex-1 bg-green-600 text-white py-2 rounded-lg font-medium">
+          Accept
+        </button>
+        <button class="flex-1 bg-red-500 text-white py-2 rounded-lg font-medium">
+          Reject
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-white shadow-lg py-3 px-6 flex justify-between">
+    <a href="rider_dashboard.html" class="text-gray-600">Home</a>
+    <a href="rider_ongoing.html" class="text-gray-600">Ongoing</a>
+    <a href="rider_notifications.html" class="text-gray-600">Notifications</a>
+    <a href="rider_profile.html" class="text-gray-600">Profile</a>
+  </nav>
+
+</body>
+</html>

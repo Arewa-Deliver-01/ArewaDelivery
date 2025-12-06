@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Detail - Customer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.4/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <a href="customer_dashboard.html" class="text-xl font-bold text-blue-600">ArewaDeliver</a>
+    <div>
+      <a href="customer_notifications.html" class="mr-4 text-gray-600 hover:text-blue-600">Notifications</a>
+      <a href="customer_profile.html" class="text-gray-600 hover:text-blue-600">Profile</a>
+    </div>
+  </nav>
+
+  <!-- Store Header -->
+  <header class="p-6 bg-white shadow rounded-b-lg mb-6">
+    <div class="flex items-center">
+      <img src="../assets/images/logo.png" alt="Store Logo" class="w-24 h-24 rounded-full">
+      <div class="ml-6">
+        <h1 class="text-2xl font-bold text-gray-800">Store Name</h1>
+        <p class="text-gray-500">Store description, location, contact info...</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <main class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Single Product Card -->
+    <div class="bg-white shadow rounded-lg p-4 hover:shadow-lg transition">
+      <img src="../assets/images/logo.png" alt="Product Image" class="w-full h-40 object-cover rounded">
+      <h2 class="text-lg font-semibold mt-4 text-gray-800">Product Name</h2>
+      <p class="text-gray-500 mt-1">$Price</p>
+      <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+    </div>
+
+    <!-- Duplicate Products as needed -->
+    <div class="bg-white shadow rounded-lg p-4 hover:shadow-lg transition">
+      <img src="../assets/images/logo.png" alt="Product Image" class="w-full h-40 object-cover rounded">
+      <h2 class="text-lg font-semibold mt-4 text-gray-800">Product Name 2</h2>
+      <p class="text-gray-500 mt-1">$Price</p>
+      <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Add to Cart</button>
+    </div>
+  </main>
+</body>
+</html>

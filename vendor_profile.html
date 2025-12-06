@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Profile - Arewa Deliver</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="vendor_dashboard.html" class="flex items-center space-x-2">
+        <img src="../assets/images/logo.png" alt="Arewa Deliver Logo" class="h-10 w-10">
+        <span class="font-bold text-xl text-blue-800">Arewa Deliver</span>
+      </a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="vendor_dashboard.html" class="hover:text-blue-600 font-medium">Dashboard</a>
+        <a href="vendor_products.html" class="hover:text-blue-600 font-medium">Products</a>
+        <a href="vendor_new_delivery.html" class="hover:text-blue-600 font-medium">New Delivery</a>
+        <a href="vendor_orders.html" class="hover:text-blue-600 font-medium">Orders</a>
+        <a href="vendor_wallet.html" class="hover:text-blue-600 font-medium">Wallet</a>
+        <a href="vendor_notifications.html" class="hover:text-blue-600 font-medium">Notifications</a>
+        <a href="vendor_profile.html" class="hover:text-blue-600 font-medium">Profile</a>
+        <a href="../logout.html" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Logout</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-white">
+      <a href="vendor_dashboard.html" class="block hover:text-blue-600 font-medium">Dashboard</a>
+      <a href="vendor_products.html" class="block hover:text-blue-600 font-medium">Products</a>
+      <a href="vendor_new_delivery.html" class="block hover:text-blue-600 font-medium">New Delivery</a>
+      <a href="vendor_orders.html" class="block hover:text-blue-600 font-medium">Orders</a>
+      <a href="vendor_wallet.html" class="block hover:text-blue-600 font-medium">Wallet</a>
+      <a href="vendor_notifications.html" class="block hover:text-blue-600 font-medium">Notifications</a>
+      <a href="vendor_profile.html" class="block hover:text-blue-600 font-medium">Profile</a>
+      <a href="../logout.html" class="block bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-center">Logout</a>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="py-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-blue-800">Vendor Profile</h1>
+    <p class="text-gray-600 mt-2">Update your account and business information here.</p>
+
+    <div class="mt-6 bg-white shadow rounded-lg p-6">
+      <form class="space-y-6">
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="businessName">Business Name</label>
+          <input type="text" id="businessName" class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your business name">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="ownerName">Owner Name</label>
+          <input type="text" id="ownerName" class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your full name">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
+          <input type="email" id="email" class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your email">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="phone">Phone</label>
+          <input type="tel" id="phone" class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter phone number">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-2" for="address">Business Address</label>
+          <textarea id="address" class="w-full border border-gray-300 rounded px-4 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your business address"></textarea>
+        </div>
+        <div class="flex justify-end">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Update Profile</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+      <p>&copy; 2025 Arewa Deliver. All rights reserved.</p>
+      <div class="flex justify-center mt-4 space-x-4">
+        <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600">Terms of Service</a>
+        <a href="#" class="hover:text-blue-600">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

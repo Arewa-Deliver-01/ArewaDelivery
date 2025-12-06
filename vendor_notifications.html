@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Notifications - Arewa Deliver</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../assets/images/logo.png" type="image/png">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="vendor_dashboard.html" class="flex items-center space-x-2">
+        <img src="../assets/images/logo.png" alt="Arewa Deliver Logo" class="h-10 w-10">
+        <span class="font-bold text-xl text-blue-800">Arewa Deliver</span>
+      </a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="vendor_dashboard.html" class="hover:text-blue-600 font-medium">Dashboard</a>
+        <a href="vendor_products.html" class="hover:text-blue-600 font-medium">Products</a>
+        <a href="vendor_new_delivery.html" class="hover:text-blue-600 font-medium">New Delivery</a>
+        <a href="vendor_orders.html" class="hover:text-blue-600 font-medium">Orders</a>
+        <a href="vendor_wallet.html" class="hover:text-blue-600 font-medium">Wallet</a>
+        <a href="vendor_notifications.html" class="hover:text-blue-600 font-medium">Notifications</a>
+        <a href="vendor_profile.html" class="hover:text-blue-600 font-medium">Profile</a>
+        <a href="../logout.html" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Logout</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2 bg-white">
+      <a href="vendor_dashboard.html" class="block hover:text-blue-600 font-medium">Dashboard</a>
+      <a href="vendor_products.html" class="block hover:text-blue-600 font-medium">Products</a>
+      <a href="vendor_new_delivery.html" class="block hover:text-blue-600 font-medium">New Delivery</a>
+      <a href="vendor_orders.html" class="block hover:text-blue-600 font-medium">Orders</a>
+      <a href="vendor_wallet.html" class="block hover:text-blue-600 font-medium">Wallet</a>
+      <a href="vendor_notifications.html" class="block hover:text-blue-600 font-medium">Notifications</a>
+      <a href="vendor_profile.html" class="block hover:text-blue-600 font-medium">Profile</a>
+      <a href="../logout.html" class="block bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-center">Logout</a>
+    </div>
+  </header>
+
+  <!-- Notifications Section -->
+  <section class="py-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-blue-800">Notifications</h1>
+    <p class="text-gray-600 mt-2">All important updates, new orders, commissions, and messages will appear here.</p>
+
+    <div class="mt-6 space-y-4">
+      <!-- Notification Item -->
+      <div class="bg-white shadow rounded-lg p-4 flex items-start space-x-4 hover:bg-blue-50 transition">
+        <div class="flex-shrink-0">
+          <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m4 0h-1v4h-1m4 0h-1v4h-1M3 12h3m0 0v6m0-6v-6m0 6H3m3 0h3M21 12h-3m0 0v6m0-6v-6m0 6h3m-3 0h-3"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">New Order Received</p>
+          <p class="text-gray-500 text-sm">You have a new delivery request for order #ORD-1023. Please check your orders page.</p>
+          <p class="text-gray-400 text-xs mt-1">5 minutes ago</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg p-4 flex items-start space-x-4 hover:bg-blue-50 transition">
+        <div class="flex-shrink-0">
+          <svg class="h-6 w-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 3V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">Commission Credited</p>
+          <p class="text-gray-500 text-sm">$50 has been credited to your wallet for completed deliveries.</p>
+          <p class="text-gray-400 text-xs mt-1">2 hours ago</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow rounded-lg p-4 flex items-start space-x-4 hover:bg-blue-50 transition">
+        <div class="flex-shrink-0">
+          <svg class="h-6 w-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h8m-8 4h6"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-gray-800">System Message</p>
+          <p class="text-gray-500 text-sm">Reminder: Update your profile to receive faster order processing.</p>
+          <p class="text-gray-400 text-xs mt-1">1 day ago</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+      <p>&copy; 2025 Arewa Deliver. All rights reserved.</p>
+      <div class="flex justify-center mt-4 space-x-4">
+        <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600">Terms of Service</a>
+        <a href="#" class="hover:text-blue-600">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

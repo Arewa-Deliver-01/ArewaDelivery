@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arewa Deliver - Fast Delivery Across Arewa</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- App Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',   /* Blue-600 */
+            secondary: '#1e40af', /* Blue-900 */
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white py-4 px-6 shadow-md flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="../assets/images/logo.png" alt="Arewa Deliver Logo" class="w-10 h-10 rounded-full">
+      <h1 class="text-xl font-bold tracking-wide">Arewa Deliver</h1>
+    </div>
+    <nav class="space-x-4">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#features" class="hover:underline">Features</a>
+      <a href="login.html" class="hover:underline">Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="p-6 mt-4 bg-white rounded-xl shadow-md text-center md:flex md:items-center md:justify-between">
+    <div>
+      <h2 class="text-3xl font-bold text-primary">Your Delivery, Faster</h2>
+      <p class="text-gray-600 mt-3 max-w-md mx-auto">Order anything from vendors near you — delivered fast and safely, right to your door.</p>
+
+      <div class="mt-5 space-x-3 flex justify-center md:justify-start flex-wrap">
+        <a href="register.html"
+           class="bg-secondary text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary transition">
+           Create Account
+        </a>
+        <a href="login.html"
+           class="bg-gray-200 text-gray-800 py-3 px-6 rounded-lg font-semibold hover:bg-gray-300 transition">
+           Login
+        </a>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0">
+      <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Delivery Illustration" class="w-48 mx-auto md:w-64 opacity-90">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="px-6 mt-10">
+    <h3 class="text-2xl font-bold text-gray-800 mb-3 text-center">About Arewa Deliver</h3>
+    <p class="text-gray-600 text-center max-w-2xl mx-auto">
+      Arewa Deliver is your trusted delivery partner across Arewa. We connect you to local vendors, trusted riders, and provide a seamless, fast, and safe delivery experience.
+    </p>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="px-6 mt-10">
+    <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Why Choose Us?</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition cursor-pointer text-center">
+        <p class="font-bold text-primary">Fast Delivery</p>
+        <p class="text-gray-600 text-sm mt-1">Quick pickup & drop-off within your area</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition cursor-pointer text-center">
+        <p class="font-bold text-primary">Trusted Riders</p>
+        <p class="text-gray-600 text-sm mt-1">Verified, professional, and reliable</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition cursor-pointer text-center">
+        <p class="font-bold text-primary">Secure Payments</p>
+        <p class="text-gray-600 text-sm mt-1">Wallet, card & cash options</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="p-6 mt-10 text-center">
+    <a href="register.html"
+       class="block w-full md:inline-block md:w-auto bg-secondary text-white py-3 px-6 rounded-lg font-bold hover:bg-primary transition">
+       Create Account
+    </a>
+    <a href="login.html"
+       class="block w-full md:inline-block md:w-auto mt-3 md:mt-0 md:ml-4 text-primary font-semibold hover:text-secondary transition">
+       Already have an account? Login
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-16 bg-gray-100 py-6 text-center text-gray-600 text-sm">
+    &copy; 2025 Arewa Deliver. All rights reserved.
+  </footer>
+
+  <!-- BOTTOM NAV -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t md:hidden">
+    <div class="flex justify-around py-3">
+      <a href="index.html" class="flex flex-col items-center text-primary font-bold">
+        <span class="material-icons">home</span>
+        <span class="text-xs">Home</span>
+      </a>
+      <a href="login.html" class="flex flex-col items-center text-gray-500 hover:text-primary transition">
+        <span class="material-icons">login</span>
+        <span class="text-xs">Login</span>
+      </a>
+      <a href="register.html" class="flex flex-col items-center text-gray-500 hover:text-primary transition">
+        <span class="material-icons">person_add</span>
+        <span class="text-xs">Register</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+</html>

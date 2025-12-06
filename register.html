@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Arewa Deliver</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body class="bg-gray-50 font-sans flex items-center justify-center min-h-screen">
+
+  <!-- Register Container -->
+  <div class="bg-white shadow-lg rounded-lg w-full max-w-lg p-8">
+    <!-- Logo -->
+    <div class="flex justify-center mb-6">
+      <img src="assets/images/logo.png" alt="Arewa Deliver Logo" class="h-14 w-14">
+    </div>
+    <h2 class="text-2xl font-bold text-center text-blue-800 mb-4">Create Your Account</h2>
+    <p class="text-gray-600 text-center mb-6">Join Arewa Deliver as Customer, Vendor, or Rider.</p>
+
+    <!-- Register Form -->
+    <form id="registerForm" action="customer_dashboard.html" method="POST" class="space-y-4">
+      <!-- Role Selection -->
+      <div>
+        <label class="block text-gray-700 mb-1 font-medium">Register as</label>
+        <select id="roleSelect" name="role" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="customer">Customer</option>
+          <option value="vendor">Vendor</option>
+          <option value="rider">Rider</option>
+        </select>
+      </div>
+
+      <!-- Full Name -->
+      <div>
+        <label class="block text-gray-700 mb-1 font-medium">Full Name</label>
+        <input type="text" name="fullname" placeholder="John Doe" required
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-gray-700 mb-1 font-medium">Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-gray-700 mb-1 font-medium">Password</label>
+        <input type="password" name="password" placeholder="********" required
+               class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Dynamic Fields -->
+      <div id="dynamicFields" class="space-y-4">
+        <!-- Vendor: Business Name -->
+        <div class="hidden" id="vendorField">
+          <label class="block text-gray-700 mb-1 font-medium">Business Name</label>
+          <input type="text" name="business_name" placeholder="Your Business" 
+                 class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Rider: Vehicle Type -->
+        <div class="hidden" id="riderField">
+          <label class="block text-gray-700 mb-1 font-medium">Vehicle Type</label>
+          <input type="text" name="vehicle_type" placeholder="Bike, Car, etc."
+                 class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+              class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 font-semibold transition duration-200">
+        Create Account
+      </button>
+    </form>
+
+    <!-- Login Link -->
+    <p class="text-center text-gray-600 mt-4">
+      Already have an account?
+      <a href="login.html" class="text-blue-600 font-medium hover:underline">Login here</a>
+    </p>
+  </div>
+
+  <script>
+    const roleSelect = document.getElementById('roleSelect');
+    const vendorField = document.getElementById('vendorField');
+    const riderField = document.getElementById('riderField');
+
+    roleSelect.addEventListener('change', () => {
+      const role = roleSelect.value;
+      vendorField.classList.add('hidden');
+      riderField.classList.add('hidden');
+
+      if(role === 'vendor') {
+        vendorField.classList.remove('hidden');
+      } else if(role === 'rider') {
+        riderField.classList.remove('hidden');
+      }
+    });
+  </script>
+
+</body>
+</html>

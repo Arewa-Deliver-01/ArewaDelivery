@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ongoing Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <h1 class="text-xl font-bold text-gray-800">Ongoing Delivery</h1>
+  </header>
+
+  <section class="p-4 space-y-4">
+
+    <!-- Ongoing Delivery Card -->
+    <div class="bg-white p-5 rounded-xl shadow">
+      <div class="flex justify-between items-center">
+        <h2 class="text-lg font-semibold text-gray-800">Delivery #1201</h2>
+        <span class="text-sm px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full">
+          In Progress
+        </span>
+      </div>
+
+      <div class="mt-3 text-sm text-gray-700 space-y-2">
+        <p><span class="font-medium">Pickup:</span> Sabon Gari Market</p>
+        <p><span class="font-medium">Drop-off:</span> Zoo Road</p>
+        <p><span class="font-medium">Distance:</span> 5.2 km</p>
+        <p><span class="font-medium">Earnings:</span> ₦1,200</p>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div class="mt-4 bg-gray-200 h-40 rounded-lg flex items-center justify-center text-gray-500 text-sm">
+        Map Loading...
+      </div>
+
+      <div class="mt-4 space-y-2">
+        <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium">
+          Mark as Picked Up
+        </button>
+
+        <button class="w-full bg-green-600 text-white py-2 rounded-lg font-medium">
+          Mark as Delivered
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 w-full bg-white shadow-lg py-3 px-6 flex justify-between">
+    <a href="rider_dashboard.html" class="text-gray-600">Home</a>
+    <a href="rider_new_delivery.html" class="text-gray-600">New</a>
+    <a href="rider_notifications.html" class="text-gray-600">Notifications</a>
+    <a href="rider_profile.html" class="text-gray-600">Profile</a>
+  </nav>
+
+</body>
+</html>
