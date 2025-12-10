@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login — Arewadeliver</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login — Arewadeliver</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a class="logo" href="index.html">Arewadeliver</a>
-      <div class="nav-links"><a href="register.html">Register</a><a href="forgot_password.html">Forgot Password</a></div>
-      <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    </nav>
-    <div class="mobile-nav" id="mobileNav"><a href="register.html">Register</a><a href="forgot_password.html">Forgot Password</a></div>
-  </header>
-
-  <main class="container" style="padding:50px 20px">
-    <h1>Login</h1>
-    <p>Select your role to login:</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
-      <a class="btn primary" href="customer/customer_dashboard.html">Customer Login</a>
-      <a class="btn ghost" href="vendor/vendor_dashboard.html">Vendor Login</a>
-      <a class="btn ghost" href="rider/rider_dashboard.html">Rider Login</a>
-      <a class="btn ghost" href="admin/admin_dashboard.html">Admin Login</a>
+<header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Arewadeliver</a>
+    <div class="nav-links">
+      <a href="register.html">Register</a>
+      <a href="forgot_password.html">Forgot Password</a>
     </div>
-    <p style="margin-top:18px;color:var(--muted)">Note: These are demo links for now (placeholders).</p>
-  </main>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav"><a href="register.html">Register</a><a href="forgot_password.html">Forgot Password</a></div>
+</header>
 
-  <footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
-  <script src="assets/js/main.js"></script>
+<main>
+  <div class="auth-container" style="margin-top:40px">
+    <h2>Login</h2>
+    <div class="input-group">
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" type="email" placeholder="you@example.com">
+    </div>
+    <div class="input-group">
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" placeholder="••••••">
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="auth-btn" id="loginBtn">Sign in</button>
+      <button class="auth-btn" id="demoBtn" style="background:#085c9e">Demo Users</button>
+    </div>
+
+    <p class="auth-links" style="margin-top:12px"><a href="forgot_password.html">Forgot password?</a></p>
+    <p id="loginMessage" style="color:#c00;margin-top:12px"></p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+<script>
+  document.getElementById('loginBtn').addEventListener('click', function(){
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd = document.getElementById('loginPassword').value;
+    const out = document.getElementById('loginMessage');
+    out.textContent = '';
+    if(!email || !pwd){ out.textContent = 'Please enter email and password.'; return; }
+    const res = AV.loginUser(email, pwd);
+    if(!res.ok){ out.textContent = res.message; return; }
+    // success
+    AV.redirectAfterLogin(res.user);
+  });
+
+  // Demo quick users generator
+  document.getElementById('demoBtn').addEventListener('click', function(){
+    // Create demo accounts if not exist
+    const demo = [
+      { name: "Demo Customer", email: "demo.customer@example.com", password: "password", role: "customer" },
+      { name: "Demo Vendor", email: "demo.vendor@example.com", password: "password", role: "vendor" },
+      { name: "Demo Rider", email: "demo.rider@example.com", password: "password", role: "rider" },
+      { name: "Demo Admin", email: "demo.admin@example.com", password: "password", role: "admin" }
+    ];
+    demo.forEach(d => {
+      const users = AV.loadUsers();
+      if(!users.find(u => u.email === d.email)){
+        AV.registerUser(d);
+      }
+    });
+    alert('Demo users created. Use email like demo.customer@example.com and password "password" to login.');
+  });
+</script>
 </body>
 </html>
