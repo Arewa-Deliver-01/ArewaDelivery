@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Order is Confirmed – Arewadeliver</title>
+  <style>
+    body { background:#f5f5f5; font-family: Arial, sans-serif; padding:20px; }
+    .container {
+      max-width:600px; margin:auto; background:#fff; padding:25px;
+      border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    }
+    .brand { font-size:24px; font-weight:900; color:#1b1b47; text-align:center; }
+    .info { background:#f0f0ff; padding:15px; border-radius:8px; margin-top:15px; }
+    p { color:#444; font-size:16px; line-height:1.6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">Arewadeliver</div>
+    <p>Hello <strong>{{customer_name}}</strong>,</p>
+    <p>Your order has been confirmed! Here are the details:</p>
+
+    <div class="info">
+      <p><strong>Order ID:</strong> {{order_id}}</p>
+      <p><strong>Items:</strong> {{items_list}}</p>
+      <p><strong>Payment:</strong> {{payment_status}}</p>
+      <p><strong>Estimated Delivery:</strong> {{delivery_time}}</p>
+    </div>
+
+    <p>You can track your order anytime in your dashboard.</p>
+  </div>
+</body>
+</html>
