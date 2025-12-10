@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider Orders</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Arewadeliver Rider</div>
+    <div class="nav-links">
+      <a href="rider_dashboard.html">Dashboard</a>
+      <a href="rider_profile.html">Profile</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="rider_dashboard.html">Dashboard</a>
+    <a href="rider_profile.html">Profile</a>
+  </div>
+</header>
+
+<section class="dashboard">
+  <h2>Available & Active Orders</h2>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Available Orders</h3>
+      <p>Pick up orders waiting for riders.</p>
+    </div>
+
+    <div class="card">
+      <h3>In Progress</h3>
+      <p>Current orders you are delivering.</p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

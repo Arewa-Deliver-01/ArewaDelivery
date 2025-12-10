@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Arewadeliver</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Arewadeliver</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Your top questions, answered clearly and simply.</p>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" style="padding: 40px 20px; max-width: 900px; margin: auto;">
+
+    <div class="faq-item">
+      <h3 onclick="toggleFAQ(this)">What is Arewadeliver?<span>+</span></h3>
+      <p class="faq-answer">Arewadeliver is a modern delivery platform that connects customers, vendors, and riders. You can order items, deliver packages, or manage your business — all in one place.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 onclick="toggleFAQ(this)">How do I place an order?<span>+</span></h3>
+      <p class="faq-answer">Simply create an account as a customer, browse available vendors or services, and submit your order. A rider will handle the pickup and delivery.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 onclick="toggleFAQ(this)">How can riders join the platform?<span>+</span></h3>
+      <p class="faq-answer">Riders can register on the rider signup page, upload required information, and once approved — they can start accepting delivery requests.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 onclick="toggleFAQ(this)">Is my data secure?<span>+</span></h3>
+      <p class="faq-answer">Yes. We follow best practices to encrypt and protect user information across the platform.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 onclick="toggleFAQ(this)">How do I contact support?<span>+</span></h3>
+      <p class="faq-answer">You can reach our support team anytime through the contact page or support form. We respond as quickly as possible.</p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Arewadeliver. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      const symbol = element.querySelector("span");
+
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        symbol.textContent = "+";
+      } else {
+        answer.style.display = "block";
+        symbol.textContent = "-";
+      }
+    }
+  </script>
+
+</body>
+</html>

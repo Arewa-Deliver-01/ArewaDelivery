@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Orders</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Arewadeliver Admin</div>
+    <div class="nav-links">
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_users.html">Users</a>
+      <a href="admin_settings.html">Settings</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="admin_dashboard.html">Dashboard</a>
+    <a href="admin_users.html">Users</a>
+    <a href="admin_settings.html">Settings</a>
+  </div>
+</header>
+
+<section class="dashboard">
+  <h2>All Orders</h2>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Pending Orders</h3>
+      <p>Orders waiting for assignment.</p>
+    </div>
+
+    <div class="card">
+      <h3>Active Deliveries</h3>
+      <p>Riders currently handling orders.</p>
+    </div>
+
+    <div class="card">
+      <h3>Completed Orders</h3>
+      <p>Successfully delivered items.</p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

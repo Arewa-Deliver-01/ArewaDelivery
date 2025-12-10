@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rider Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Arewadeliver Rider</div>
+    <div class="nav-links">
+      <a href="rider_orders.html">Orders</a>
+      <a href="rider_profile.html">Profile</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="rider_orders.html">Orders</a>
+    <a href="rider_profile.html">Profile</a>
+  </div>
+</header>
+
+<section class="dashboard">
+  <h2>Rider Dashboard</h2>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Active Deliveries</h3>
+      <p>Orders currently assigned to you.</p>
+    </div>
+
+    <div class="card">
+      <h3>Earnings</h3>
+      <p>Daily & weekly income summary.</p>
+    </div>
+
+    <div class="card">
+      <h3>Delivery History</h3>
+      <p>Your previous completed rides.</p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

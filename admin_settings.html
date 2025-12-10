@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Settings</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Arewadeliver Admin</div>
+    <div class="nav-links">
+      <a href="admin_dashboard.html">Dashboard</a>
+      <a href="admin_users.html">Users</a>
+      <a href="admin_orders.html">Orders</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="admin_dashboard.html">Dashboard</a>
+    <a href="admin_users.html">Users</a>
+    <a href="admin_orders.html">Orders</a>
+  </div>
+</header>
+
+<section class="dashboard">
+  <h2>Platform Settings</h2>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Payment Settings</h3>
+      <p>Configure payment gateways.</p>
+    </div>
+
+    <div class="card">
+      <h3>Delivery Charges</h3>
+      <p>Set pricing rules for deliveries.</p>
+    </div>
+
+    <div class="card">
+      <h3>System Preferences</h3>
+      <p>Manage platform-wide configurations.</p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

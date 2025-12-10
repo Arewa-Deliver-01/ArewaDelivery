@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login — Arewadeliver</title>
+<link rel="stylesheet" href="assets/css/style.css"></head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Arewadeliver</a>
+      <div class="nav-links"><a href="register.html">Register</a><a href="forgot_password.html">Forgot Password</a></div>
+      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav"><a href="register.html">Register</a><a href="forgot_password.html">Forgot Password</a></div>
+  </header>
+
+  <main class="container" style="padding:50px 20px">
+    <h1>Login</h1>
+    <p>Select your role to login:</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+      <a class="btn primary" href="customer/customer_dashboard.html">Customer Login</a>
+      <a class="btn ghost" href="vendor/vendor_dashboard.html">Vendor Login</a>
+      <a class="btn ghost" href="rider/rider_dashboard.html">Rider Login</a>
+      <a class="btn ghost" href="admin/admin_dashboard.html">Admin Login</a>
+    </div>
+    <p style="margin-top:18px;color:var(--muted)">Note: These are demo links for now (placeholders).</p>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

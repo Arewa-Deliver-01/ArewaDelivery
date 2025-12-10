@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Orders</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Arewadeliver Vendor</div>
+    <div class="nav-links">
+      <a href="vendor_dashboard.html">Dashboard</a>
+      <a href="vendor_add_product.html">Add Product</a>
+      <a href="vendor_profile.html">Profile</a>
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="vendor_dashboard.html">Dashboard</a>
+    <a href="vendor_add_product.html">Add Product</a>
+    <a href="vendor_profile.html">Profile</a>
+  </div>
+</header>
+
+<section class="dashboard">
+  <h2>Vendor Orders</h2>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <h3>Pending</h3>
+      <p>Orders awaiting acceptance.</p>
+    </div>
+
+    <div class="card">
+      <h3>In Progress</h3>
+      <p>Orders being processed.</p>
+    </div>
+
+    <div class="card">
+      <h3>Completed</h3>
+      <p>Successfully delivered orders.</p>
+    </div>
+  </div>
+</section>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
