@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Register Customer — Arewadeliver</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Register — Customer</title>
+<link rel="stylesheet" href="../assets/css/style.css"></head>
 <body>
-  <header><nav class="navbar"><a class="logo" href="index.html">Arewadeliver</a><div class="menu-btn" onclick="toggleMenu()">☰</div></nav><div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a></div></header>
+<header>
+  <nav class="navbar"><a class="logo" href="../index.html">Arewadeliver</a><div class="nav-links"><a href="../login.html">Login</a></div><div class="menu-btn" onclick="toggleMenu()">☰</div></nav>
+  <div class="mobile-nav" id="mobileNav"><a href="../login.html">Login</a></div>
+</header>
 
-  <main class="container" style="padding:50px 20px">
-    <h1>Register as Customer</h1>
-    <p>Signup form placeholder — name, phone, email, password.</p>
-  </main>
+<main>
+  <div class="auth-container">
+    <h2>Create Customer Account</h2>
 
-  <footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
-  <script src="assets/js/main.js"></script>
+    <div class="input-group"><label>Name</label><input id="regName" placeholder="Your full name"></div>
+    <div class="input-group"><label>Email</label><input id="regEmail" type="email" placeholder="you@example.com"></div>
+    <div class="input-group"><label>Phone</label><input id="regPhone" placeholder="+234..."></div>
+    <div class="input-group"><label>Password</label><input id="regPassword" type="password" placeholder="Create password"></div>
+
+    <button class="auth-btn" id="registerBtn">Register</button>
+    <p id="regMessage" style="color:#c00;margin-top:12px"></p>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script>
+  document.getElementById('registerBtn').addEventListener('click', function(){
+    const name = document.getElementById('regName').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const phone = document.getElementById('regPhone').value.trim();
+    const pwd = document.getElementById('regPassword').value;
+    const out = document.getElementById('regMessage');
+    out.textContent = '';
+    if(!email || !pwd || !name){ out.textContent = 'Please fill name, email and password.'; return; }
+    const res = AV.registerUser({ name, email, phone, password: pwd, role: 'customer' });
+    if(!res.ok){ out.textContent = res.message; return; }
+    // Optional: auto-login then redirect
+    AV.loginUser(email, pwd);
+    AV.redirectAfterLogin(res.user);
+  });
+</script>
 </body>
 </html>
