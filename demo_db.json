@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "u_1001",
+      "name": "Demo Customer",
+      "email": "demo.customer@example.com",
+      "phone": "+2348000000001",
+      "role": "customer",
+      "password": "cGFzc3dvcmQ=", 
+      "createdAt": "2025-01-01T08:00:00Z"
+    },
+    {
+      "id": "u_1002",
+      "name": "Demo Vendor",
+      "email": "demo.vendor@example.com",
+      "phone": "+2348000000002",
+      "role": "vendor",
+      "password": "cGFzc3dvcmQ=",
+      "createdAt": "2025-01-01T08:00:10Z"
+    },
+    {
+      "id": "u_1003",
+      "name": "Demo Rider",
+      "email": "demo.rider@example.com",
+      "phone": "+2348000000003",
+      "role": "rider",
+      "password": "cGFzc3dvcmQ=",
+      "createdAt": "2025-01-01T08:00:20Z"
+    },
+    {
+      "id": "u_1004",
+      "name": "Demo Admin",
+      "email": "demo.admin@example.com",
+      "phone": "+2348000000004",
+      "role": "admin",
+      "password": "cGFzc3dvcmQ=",
+      "createdAt": "2025-01-01T08:00:30Z"
+    }
+  ],
+  "reset_tokens": {
+    "sampletoken123": {
+      "email": "demo.customer@example.com",
+      "expires": 1735720800000
+    }
+  }
+}
