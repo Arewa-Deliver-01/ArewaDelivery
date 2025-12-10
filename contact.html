@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Arewadeliver</title>
-<link rel="stylesheet" href="assets/css/style.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Arewadeliver</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a class="logo" href="index.html">Arewadeliver</a>
-      <div class="nav-links"><a href="features.html">Features</a><a href="about.html">About</a></div>
-      <div class="menu-btn" onclick="toggleMenu()">☰</div>
-    </nav>
-    <div class="mobile-nav" id="mobileNav"><a href="features.html">Features</a><a href="about.html">About</a></div>
-  </header>
 
-  <main class="container" style="padding:50px 20px">
-    <h1>Contact Us</h1>
-    <p>For partnerships or support, email: <strong>hello@arewadeliver</strong> arewadeliver@gmail.com</p>
-    <p style="margin-top:20px">Or use this quick form (placeholder):</p>
-    <form style="margin-top:10px;display:grid;gap:10px;max-width:520px">
-      <input placeholder="Your name" style="padding:12px;border-radius:8px;border:1px solid #e5e7eb">
-      <input placeholder="Your email" style="padding:12px;border-radius:8px;border:1px solid #e5e7eb">
-      <textarea placeholder="How can we help?" rows="5" style="padding:12px;border-radius:8px;border:1px solid #e5e7eb"></textarea>
-      <button class="btn primary" type="button">Send Message</button>
-    </form>
-  </main>
+<header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">Arewadeliver</a>
+    <div class="nav-links"><a href="features.html">Features</a><a href="faq.html">FAQ</a></div>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </nav>
+  <div class="mobile-nav" id="mobileNav"><a href="features.html">Features</a><a href="faq.html">FAQ</a></div>
+</header>
 
-  <footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
-  <script src="assets/js/main.js"></script>
+<main class="container" style="padding:40px 20px;max-width:900px;margin:auto">
+  <h1>Contact Us</h1>
+  <p class="lead">We’re here to help. Reach out for support, partnerships, or media inquiries.</p>
+
+  <div style="display:grid;gap:20px;margin-top:18px">
+    <div style="background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+      <h3>General Inquiries</h3>
+      <p>Email: <strong>arewadeliver@gmail.com</strong></p>
+      <p>Phone: <strong>+234 9121704067</strong> (placeholder)</p>
+    </div>
+
+    <div style="background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+      <h3>Support Form</h3>
+      <form style="display:grid;gap:12px">
+        <input placeholder="Full name" required style="padding:12px;border:1px solid #e6eef0;border-radius:8px">
+        <input placeholder="Email" type="email" required style="padding:12px;border:1px solid #e6eef0;border-radius:8px">
+        <textarea placeholder="How can we help?" rows="5" style="padding:12px;border:1px solid #e6eef0;border-radius:8px"></textarea>
+        <button class="auth-btn" type="button">Send Message</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2025 Arewadeliver</p></div></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
